@@ -1,0 +1,18 @@
+CSV Audit Cleaner Lite v1.0 - Freeware License
+
+Copyright (c) 2026 One Eye Automation. All rights reserved.
+
+You may:
+- Use this Lite edition at no charge for personal or commercial CSV files.
+- Redistribute the original, complete, unmodified ZIP archive.
+- List or mirror that original archive in a reputable software directory.
+
+You may not:
+- Sell, sublicense, modify, repackage, or misrepresent this Lite edition.
+- Remove the row limit, notices, license, checksums, or product links.
+- Use the software for unauthorized collection, spam, access-control bypass,
+  or unlawful activity.
+
+The software is provided "as is", without warranties. Keep backups and verify
+results before using them in production. The software does not overwrite source
+CSV files by design.
