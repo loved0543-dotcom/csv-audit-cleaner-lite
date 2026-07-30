@@ -34,7 +34,7 @@
 - Consumes: 사용 유형, 버전, 관찰 결과, 선택 수치, 개인정보 금지 확인
 - Produces: GitHub가 렌더할 수 있는 `CSV Audit Cleaner Lite feedback` Issue Form
 
-- [ ] **Step 1: 실패하는 공개 seam 검사 작성**
+- [x] **Step 1: 실패하는 공개 seam 검사 작성**
 
 ```python
 from pathlib import Path
@@ -56,24 +56,24 @@ def test_feedback_form_contract():
 
     privacy = next(item for item in data["body"] if item.get("id") == "privacy")
     assert privacy["type"] == "checkboxes"
-    assert privacy["attributes"]["options"][0]["validations"]["required"] is True
+    assert privacy["attributes"]["options"][0]["required"] is True
     label = privacy["attributes"]["options"][0]["label"]
     for forbidden in ("CSV files", "customer data", "email addresses", "local paths"):
         assert forbidden in label
 ```
 
-- [ ] **Step 2: 검사 실행해 RED 확인**
+- [x] **Step 2: 검사 실행해 RED 확인**
 
 Run: `python -m unittest test_feedback_form.py -v`
 
 Expected: ERROR because `lite-feedback.yml` does not exist.
 
-- [ ] **Step 3: 최소 Issue Form 작성**
+- [x] **Step 3: 최소 Issue Form 작성**
 
 유형 dropdown, v1.0.0 버전, 필수 observation, 선택 counts, 필수 개인정보
 확인란을 정확히 한 번씩 만든다.
 
-- [ ] **Step 4: 검사 실행해 GREEN 확인**
+- [x] **Step 4: 검사 실행해 GREEN 확인**
 
 Run: `python -m unittest test_feedback_form.py -v`
 
@@ -90,7 +90,7 @@ Expected: `1 test` PASS.
 - Consumes: `https://github.com/loved0543-dotcom/csv-audit-cleaner-lite/issues/new?template=lite-feedback.yml`
 - Produces: README와 기존 v1.0.0 Release의 동일한 공개 피드백 링크
 
-- [ ] **Step 1: 링크 계약 검사 추가**
+- [x] **Step 1: 링크 계약 검사 추가**
 
 ```python
 def test_feedback_link_is_discoverable_without_changing_artifact():
@@ -113,18 +113,18 @@ def test_feedback_link_is_discoverable_without_changing_artifact():
         )
 ```
 
-- [ ] **Step 2: 검사 실행해 RED 확인**
+- [x] **Step 2: 검사 실행해 RED 확인**
 
 Run: `python -m unittest test_feedback_form.py -v`
 
 Expected: link test FAIL because README and Release contain 0 links.
 
-- [ ] **Step 3: 두 안내 표면에 동일 링크 1회 추가**
+- [x] **Step 3: 두 안내 표면에 동일 링크 1회 추가**
 
 문구는 `Share a verified result or report a problem`으로 통일한다. 후기·보상·
 지원 약속은 추가하지 않는다.
 
-- [ ] **Step 4: 전체 검사 실행해 GREEN 확인**
+- [x] **Step 4: 전체 검사 실행해 GREEN 확인**
 
 Run: `python -m unittest test_feedback_form.py -v`
 

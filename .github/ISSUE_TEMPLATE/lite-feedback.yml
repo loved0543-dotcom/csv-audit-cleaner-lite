@@ -1,0 +1,55 @@
+name: CSV Audit Cleaner Lite feedback
+description: Share a verified result, report a problem, or ask about the free Lite edition.
+title: "[Lite feedback] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing CSV Audit Cleaner Lite.
+
+        Describe only the workflow and non-sensitive counts. Do not upload CSV
+        files, customer data, email addresses, local paths, or sensitive reports.
+
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened?
+      options:
+        - The workflow worked
+        - I found a problem
+        - I have a question
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Keep v1.0.0 unless you tested a different published version.
+      value: v1.0.0
+    validations:
+      required: true
+
+  - type: textarea
+    id: observation
+    attributes:
+      label: What did you try and observe?
+      description: Explain the steps and visible result without including private data.
+      placeholder: I extracted the ZIP, ran the Lite EXE, selected a non-sensitive test CSV, and...
+    validations:
+      required: true
+
+  - type: textarea
+    id: counts
+    attributes:
+      label: Non-sensitive counts (optional)
+      description: Share only totals such as input rows, output rows, blank rows, duplicates, and failed files.
+      placeholder: "Input: 100, output: 94, blank: 2, duplicate: 4, failed files: 0"
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I did not include CSV files, customer data, email addresses, local paths, or sensitive reports.
+          required: true

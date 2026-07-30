@@ -17,6 +17,7 @@ Lite processes up to 100 data rows per CSV. The header row is not counted.
 
 - [Watch the actual 51-second packaged Windows workflow](https://www.youtube.com/watch?v=h8MerbgmRRY)
 - [Open the actual HTML sample report](https://oneeyeview-automation.vercel.app/csv-cleaner-sample-report.html)
+- [Share a verified result or report a problem](https://github.com/loved0543-dotcom/csv-audit-cleaner-lite/issues/new?template=lite-feedback.yml)
 
 The video and report use one fixed local sample: 4 input rows become 2 output
 rows after 1 blank row and 1 duplicate are removed, with 0 failed files. They
