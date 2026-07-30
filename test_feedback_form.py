@@ -33,24 +33,27 @@ class FeedbackFormContractTests(unittest.TestCase):
         ):
             self.assertIn(forbidden, label)
 
-    def test_feedback_link_is_discoverable_without_changing_artifact(self):
+    def test_v101_release_contract_and_feedback_link_are_discoverable(self):
         feedback_url = (
             "https://github.com/loved0543-dotcom/csv-audit-cleaner-lite/"
             "issues/new?template=lite-feedback.yml"
         )
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        release = (ROOT / "docs" / "release-notes-v1.0.0.md").read_text(
+        release = (ROOT / "docs" / "release-notes-v1.0.1.md").read_text(
             encoding="utf-8"
         )
+        form = FORM.read_text(encoding="utf-8")
 
         self.assertEqual(readme.count(feedback_url), 1)
         self.assertEqual(release.count(feedback_url), 1)
         for text in (readme, release):
-            self.assertIn("11,174,017 bytes", text)
+            self.assertIn("CSV_Audit_Cleaner_Lite_v1.0.1.zip", text)
+            self.assertIn("11,174,177 bytes", text)
             self.assertIn(
-                "454E5027D3423A792E47B7297AC07C5371D7AAE4486008F3A964A71BEB1D39B1",
+                "7787166796EDFB71C892CCDB2DE0A437FA046E9D2C9A66B2EE831AD427D6B21C",
                 text,
             )
+        self.assertIn("value: v1.0.1", form)
 
 
 if __name__ == "__main__":

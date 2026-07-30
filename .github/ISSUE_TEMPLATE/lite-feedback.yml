@@ -25,8 +25,8 @@ body:
     id: version
     attributes:
       label: Version
-      description: Keep v1.0.0 unless you tested a different published version.
-      value: v1.0.0
+      description: Keep v1.0.1 unless you tested a different published version.
+      value: v1.0.1
     validations:
       required: true
 

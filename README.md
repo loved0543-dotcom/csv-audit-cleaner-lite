@@ -8,7 +8,7 @@ Clean CSV whitespace, blank rows, and duplicates on a Windows PC, then keep an
 HTML audit report and machine-readable run logs. Files stay on the computer;
 the app does not upload CSV data to a cloud service.
 
-[Download the free Lite release](https://github.com/loved0543-dotcom/csv-audit-cleaner-lite/releases/download/v1.0.0/CSV_Audit_Cleaner_Lite_v1.0.zip)
+[Download the free Lite release](https://github.com/loved0543-dotcom/csv-audit-cleaner-lite/releases/download/v1.0.1/CSV_Audit_Cleaner_Lite_v1.0.1.zip)
 ·
 [Get the unlimited $15 version](https://lovelife717.gumroad.com/l/csv-audit-cleaner)
 ·
@@ -55,7 +55,7 @@ before a cleaned output file is written.
 
 ## Quick start
 
-1. Download `CSV_Audit_Cleaner_Lite_v1.0.zip` from the release page.
+1. Download `CSV_Audit_Cleaner_Lite_v1.0.1.zip` from the release page.
 2. Extract the complete ZIP into a new folder.
 3. Double-click `CSV_Audit_Cleaner_Lite.exe`.
 4. Add one or more CSV files and optionally enter duplicate-key columns.
@@ -70,18 +70,18 @@ subscription, paid API, or administrator access is required.
 Release file:
 
 ```text
-CSV_Audit_Cleaner_Lite_v1.0.zip
-11,174,017 bytes
-SHA-256 454E5027D3423A792E47B7297AC07C5371D7AAE4486008F3A964A71BEB1D39B1
+CSV_Audit_Cleaner_Lite_v1.0.1.zip
+11,174,177 bytes
+SHA-256 7787166796EDFB71C892CCDB2DE0A437FA046E9D2C9A66B2EE831AD427D6B21C
 ```
 
 PowerShell verification:
 
 ```powershell
-Get-FileHash .\CSV_Audit_Cleaner_Lite_v1.0.zip -Algorithm SHA256
+Get-FileHash .\CSV_Audit_Cleaner_Lite_v1.0.1.zip -Algorithm SHA256
 ```
 
-The release was checked with 32 automated tests and a real Windows launch,
+The release was checked with 40 automated tests and a real Windows launch,
 including the 101-row rejection path. The included Python launcher has a valid
 Python Software Foundation Authenticode signature.
 
