@@ -10,9 +10,9 @@ the app does not upload CSV data to a cloud service.
 
 [Download the free Lite release](https://github.com/loved0543-dotcom/csv-audit-cleaner-lite/releases/download/v1.0.0/CSV_Audit_Cleaner_Lite_v1.0.zip)
 ·
-[Get the unlimited $29 version](https://lovelife717.gumroad.com/l/csv-audit-cleaner)
+[Get the unlimited $15 version](https://lovelife717.gumroad.com/l/csv-audit-cleaner)
 ·
-[View automation services](https://oneeyeview-automation.vercel.app)
+[View product details](https://oneeyeview-automation.vercel.app)
 
 ## What it does
 
@@ -32,7 +32,7 @@ the app does not upload CSV data to a cloud service.
 
 | | Lite | Full |
 |---|---:|---:|
-| Price | Free | $29 one-time |
+| Price | Free | $15 one-time |
 | Rows per CSV | Up to 100 data rows | Unlimited by edition |
 | Batch size | Up to 100 MB per run | Up to 100 MB per run |
 | HTML audit report | Yes | Yes |
@@ -60,8 +60,8 @@ Release file:
 
 ```text
 CSV_Audit_Cleaner_Lite_v1.0.zip
-11,173,629 bytes
-SHA-256 00D31280EEBBF4FEC51415B92AE256B36A327852438F93F27AC0D15F0BA26BB1
+11,174,017 bytes
+SHA-256 454E5027D3423A792E47B7297AC07C5371D7AAE4486008F3A964A71BEB1D39B1
 ```
 
 PowerShell verification:

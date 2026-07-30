@@ -15,8 +15,8 @@ Lite processes up to 100 data rows per CSV. The header row is not counted.
 
 ### Verification
 
-- ZIP size: 11,173,629 bytes
-- SHA-256: `00D31280EEBBF4FEC51415B92AE256B36A327852438F93F27AC0D15F0BA26BB1`
+- ZIP size: 11,174,017 bytes
+- SHA-256: `454E5027D3423A792E47B7297AC07C5371D7AAE4486008F3A964A71BEB1D39B1`
 - 31 automated checks passed
 - Windows launch and 101-row rejection path checked
 - Included Python launcher Authenticode signature: valid
