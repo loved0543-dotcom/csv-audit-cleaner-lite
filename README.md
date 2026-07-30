@@ -14,6 +14,15 @@ the app does not upload CSV data to a cloud service.
 ·
 [View product details](https://oneeyeview-automation.vercel.app)
 
+[Watch the actual 51-second packaged Windows workflow](https://www.youtube.com/watch?v=h8MerbgmRRY)
+·
+[Open the actual HTML sample report](https://oneeyeview-automation.vercel.app/csv-cleaner-sample-report.html)
+
+The video and report use one fixed local sample: 4 input rows become 2 output
+rows after 1 blank row and 1 duplicate are removed, with 0 failed files. They
+show the workflow and evidence format; they do not promise the same counts for
+every CSV.
+
 ## What it does
 
 - Trims leading and trailing whitespace.
@@ -70,7 +79,7 @@ PowerShell verification:
 Get-FileHash .\CSV_Audit_Cleaner_Lite_v1.0.zip -Algorithm SHA256
 ```
 
-The release was checked with 31 automated tests and a real Windows launch,
+The release was checked with 32 automated tests and a real Windows launch,
 including the 101-row rejection path. The included Python launcher has a valid
 Python Software Foundation Authenticode signature.
 
