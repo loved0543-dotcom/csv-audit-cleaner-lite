@@ -7,12 +7,14 @@
 
 ## 선택한 접근
 
-기존 README만 최소 수정한다. 기능·ZIP·릴리스 태그·해시는 바꾸지 않는다.
+기존 README와 v1.0.0 Release 설명만 최소 수정한다. 기능·ZIP·릴리스 태그·
+해시는 바꾸지 않는다.
 
 - 상단 CTA에 51초 실제 판매 EXE 영상과 실제 HTML 샘플 보고서를 추가한다.
 - 영상은 고정 로컬 표본이며 모든 CSV에 같은 결과를 보장하지 않는다고 밝힌다.
 - 공개 판매본 검사 수를 현재 사실인 `32개`로 바로잡는다.
 - Lite와 Full 비교표, 다운로드·정식판·랜딩 링크는 그대로 유지한다.
+- Release 설명도 같은 영상·샘플 보고서·32개 검사로 맞춘다.
 
 ## 검토한 대안
 
@@ -26,6 +28,8 @@
 - README에 YouTube 영상 ID `h8MerbgmRRY`가 정확히 1회 들어간다.
 - 공개 샘플 보고서 URL이 정확히 1회 들어간다.
 - `32 automated tests`가 표시되고 낡은 `31 automated tests`가 없다.
+- v1.0.0 Release 설명에 영상·보고서·`32 automated checks`가 있고 낡은
+  `31 automated checks`가 없다.
 - 기존 Lite ZIP URL·크기·SHA-256은 바뀌지 않는다.
 - Markdown 링크 5개가 모두 HTTP 200이고 공개 GitHub README에서도 보인다.
 

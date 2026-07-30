@@ -106,3 +106,62 @@ Expected: push 성공. 공개 GitHub README에서 영상·보고서·32개 검�
 - 낡은 `31 automated tests` 없음
 - 기존 Lite ZIP URL·크기·SHA-256 유지
 - 대상 외부 링크 5개 모두 HTTP `200`
+
+### Task 2: v1.0.0 Release 설명 정합성
+
+**Files:**
+- Create: `docs/release-notes-v1.0.0.md`
+
+**Interfaces:**
+- Consumes: 기존 v1.0.0 기능·크기·SHA-256, 영상·샘플 보고서, 검사 수 `32`
+- Produces: README와 같은 구매 전 증거를 가진 기존 v1.0.0 Release 설명
+
+- [x] **Step 1: Release 설명 정본 작성**
+
+기존 포함물·범위·ZIP 메타데이터를 유지하고 `31 automated checks`를
+`32 automated checks`로 바로잡는다. 실제 영상과 샘플 보고서, 고정 표본 범위를
+추가한다.
+
+- [x] **Step 2: 정적 검사**
+
+Run:
+
+```powershell
+$r = Get-Content docs/release-notes-v1.0.0.md -Raw
+$r.Contains('32 automated checks passed') -and
+(-not $r.Contains('31 automated checks')) -and
+([regex]::Matches($r, 'h8MerbgmRRY')).Count -eq 1 -and
+([regex]::Matches($r, 'csv-cleaner-sample-report.html')).Count -eq 1
+```
+
+Expected: `True`
+
+- [x] **Step 3: 같은 Release 설명만 수정**
+
+Run:
+
+```powershell
+gh release edit v1.0.0 `
+  --repo loved0543-dotcom/csv-audit-cleaner-lite `
+  --notes-file docs/release-notes-v1.0.0.md
+```
+
+Expected: 기존 v1.0.0 URL 유지, 새 릴리스·새 자산 생성 0건.
+
+- [x] **Step 4: 공개 검증·커밋·푸시**
+
+`gh release view`와 공개 HTTP에서 영상·보고서·32개 검사·기존 ZIP 크기·해시를
+확인하고, 정본 파일과 실행 결과를 커밋·푸시한다.
+
+### Task 2 실행 결과
+
+- 기존 v1.0.0 URL·이름 유지
+- Release 설명에 영상·보고서·고정 표본 범위 추가
+- `32 automated checks passed` 확인, 낡은 `31 automated checks` 없음
+- 공개 Release 페이지 HTTP `200`
+- 자산 1개 유지:
+  `CSV_Audit_Cleaner_Lite_v1.0.zip`, `11,174,017`바이트
+- 자산 digest 유지:
+  `sha256:454e5027d3423a792e47b7297ac07c5371d7aae4486008f3a964a71beb1d39b1`
+- 현재 GitHub 표시 다운로드 수 `2`는 판매자 검증 다운로드를 포함할 수 있어
+  고객 반응이나 판매로 계산하지 않음
