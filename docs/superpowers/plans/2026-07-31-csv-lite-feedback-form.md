@@ -139,7 +139,7 @@ Expected: `2 tests` PASS.
 - Consumes: 검증된 Issue Form과 링크
 - Produces: 공개 GitHub 폼·README·Release와 실행 증거
 
-- [ ] **Step 1: diff 자체 검수와 커밋**
+- [x] **Step 1: diff 자체 검수와 커밋**
 
 Run:
 
@@ -151,7 +151,7 @@ git commit -m "feat: add privacy-safe Lite feedback form"
 
 Expected: Issue Form·테스트·두 링크만 포함한 커밋.
 
-- [ ] **Step 2: push하고 폼 URL 검증**
+- [x] **Step 2: push하고 폼 URL 검증**
 
 Run:
 
@@ -159,9 +159,10 @@ Run:
 git push origin HEAD
 ```
 
-Expected: 공개 폼 URL HTTP `200`, 템플릿명과 필드가 렌더됨.
+Expected: raw 템플릿과 README가 HTTP `200`이고, 제출 URL은 로그인 사용자에게
+폼을 제공한다.
 
-- [ ] **Step 3: 기존 v1.0.0 Release 설명 재적용**
+- [x] **Step 3: 기존 v1.0.0 Release 설명 재적용**
 
 Run:
 
@@ -173,7 +174,19 @@ gh release edit v1.0.0 `
 
 Expected: 같은 URL·태그·자산 유지.
 
-- [ ] **Step 4: 공개 완료 검사와 기록**
+- [x] **Step 4: 공개 완료 검사와 기록**
 
 README·Release 링크 각 1회, 폼 필드, Release 자산 1개·크기·digest, 실제 이슈
 0건을 확인한다. 제출이 없으므로 제3자 후기 `0`을 유지한다.
+
+## 실행 결과 — 2026-07-31 06:58 KST
+
+- RED: 폼 파일 부재, 이후 README·Release 링크 0회로 각 계약 검사가 실패했다.
+- GREEN: `python -m unittest test_feedback_form.py -v`에서 2개 검사 통과.
+- 공개 커밋: `139090c992acc369d5a8d0391f69e4f430624563`
+- raw 폼과 README HTTP `200`; README 피드백 링크 정확히 1회.
+- 비로그인 제출 URL은 GitHub 로그인으로 이동한다. 익명 제출 가능이라고
+  주장하지 않는다.
+- 기존 v1.0.0 Release는 같은 태그·이름·자산 1개를 유지했다.
+- ZIP `11,174,017`바이트, SHA-256 digest 불변, 표시 다운로드 `2`.
+- 공개 이슈 `0`; 실제 제3자 후기·사용 사례 `0`.
