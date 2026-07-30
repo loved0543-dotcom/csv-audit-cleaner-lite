@@ -1,2 +1,3 @@
 *.zip
 Thumbs.db
+__pycache__/
