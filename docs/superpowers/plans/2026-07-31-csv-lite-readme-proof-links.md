@@ -30,7 +30,7 @@
 - Consumes: 공개 YouTube ID `h8MerbgmRRY`, 공개 샘플 보고서 URL, 판매본 검사 수 `32`
 - Produces: 무료판 방문자가 직접 검증 가능한 GitHub README
 
-- [ ] **Step 1: 변경 전 계약 실패 확인**
+- [x] **Step 1: 변경 전 계약 실패 확인**
 
 Run:
 
@@ -43,12 +43,12 @@ if ($r -notmatch 'h8MerbgmRRY' -and
 
 Expected: `EXPECTED FAIL`
 
-- [ ] **Step 2: README 최소 수정**
+- [x] **Step 2: README 최소 수정**
 
 상단 CTA 아래에 실제 영상·샘플 보고서 링크와 고정 표본 범위를 추가하고,
 검증 절의 `31 automated tests`를 `32 automated tests`로 바꾼다.
 
-- [ ] **Step 3: 정적 계약 검사**
+- [x] **Step 3: 정적 계약 검사**
 
 Run:
 
@@ -66,7 +66,7 @@ $r = Get-Content README.md -Raw
 
 Expected: `True`
 
-- [ ] **Step 4: 링크 응답 검사**
+- [x] **Step 4: 링크 응답 검사**
 
 Run:
 
@@ -85,7 +85,7 @@ foreach ($url in $urls) {
 
 Expected: 다섯 응답 모두 `200`
 
-- [ ] **Step 5: 커밋·푸시·공개 검증**
+- [x] **Step 5: 커밋·푸시·공개 검증**
 
 Run:
 
@@ -97,3 +97,12 @@ git push origin HEAD
 
 Expected: push 성공. 공개 GitHub README에서 영상·보고서·32개 검사가 보이고,
 낡은 31개 표기는 없다.
+
+## 실행 결과
+
+- 공개 커밋: `fcc9c11b68d5910793f0d77661f25e56fbc77c3a`
+- 공개 GitHub HTML·raw README HTTP `200`
+- 영상 ID·샘플 보고서 URL 각 1회, `32 automated tests` 확인
+- 낡은 `31 automated tests` 없음
+- 기존 Lite ZIP URL·크기·SHA-256 유지
+- 대상 외부 링크 5개 모두 HTTP `200`
