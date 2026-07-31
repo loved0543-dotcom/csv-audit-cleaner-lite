@@ -1,0 +1,18 @@
+{
+  "succeeded": 1,
+  "failed": 0,
+  "files": [
+    {
+      "input_name": "catalog_input.csv",
+      "output_name": "catalog_input_cleaned.csv",
+      "input_rows": 100,
+      "output_rows": 90,
+      "blank_rows_removed": 5,
+      "duplicate_rows_removed": 5,
+      "encoding": "utf-8",
+      "sha256_before": "f83921fc09c6d72d1f4b674768d7deb0d49b9966d73183bcf28ce011f03fda3c",
+      "sha256_after": "f83921fc09c6d72d1f4b674768d7deb0d49b9966d73183bcf28ce011f03fda3c"
+    }
+  ],
+  "errors": []
+}

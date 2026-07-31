@@ -28,7 +28,7 @@ privacy dependency.
 ## Public artifacts
 
 - `examples/ecommerce-catalog-audit/catalog_input.csv`
-- `examples/ecommerce-catalog-audit/catalog_cleaned.csv`
+- `examples/ecommerce-catalog-audit/catalog_input_cleaned.csv`
 - `examples/ecommerce-catalog-audit/summary.json`
 - `examples/ecommerce-catalog-audit/README.md`
 - Root `README.md` gains one link to the case.

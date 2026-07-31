@@ -22,7 +22,7 @@
 
 **Files:**
 - Create: `examples/ecommerce-catalog-audit/catalog_input.csv`
-- Create: `examples/ecommerce-catalog-audit/catalog_cleaned.csv`
+- Create: `examples/ecommerce-catalog-audit/catalog_input_cleaned.csv`
 - Create: `examples/ecommerce-catalog-audit/summary.json`
 - Create: `examples/ecommerce-catalog-audit/README.md`
 - Modify: `README.md`
@@ -31,12 +31,12 @@
 - Consumes: `python -m csv_audit_cleaner.cli run --output <dir> --key-columns sku <input>` from `automation_demo/src`.
 - Produces: a public case with exact 100-to-90 row evidence and the input hash-preservation result.
 
-- [ ] **Step 1: Create the deterministic input fixture**
+- [x] **Step 1: Create the deterministic input fixture**
 
 Create 90 unique `SKU-001` through `SKU-090` rows, append duplicate rows for
 `SKU-010`, `SKU-020`, `SKU-030`, `SKU-040`, and `SKU-050`, and append five blank rows.
 
-- [ ] **Step 2: Execute the existing cleaner**
+- [x] **Step 2: Execute the existing cleaner**
 
 Run from `automation_demo`:
 
@@ -47,16 +47,16 @@ python -m csv_audit_cleaner.cli run --output <temporary-output> --key-columns sk
 
 Expected: `RUN_COMPLETE succeeded=1 failed=0` and exit code `0`.
 
-- [ ] **Step 3: Add verified outputs and report**
+- [x] **Step 3: Add verified outputs and report**
 
 Copy the generated cleaned CSV and summary values into the public case directory.
 Write `README.md` with only observed counts, hashes, the exact command, and scope limits.
 
-- [ ] **Step 4: Link the case from the root README**
+- [x] **Step 4: Link the case from the root README**
 
 Add one concise link under the results section without changing product claims.
 
-- [ ] **Step 5: Verify the case and repository**
+- [x] **Step 5: Verify the case and repository**
 
 Run:
 
@@ -70,7 +70,7 @@ Also parse both CSV files and `summary.json`; expect 100 input data rows, 90 out
 data rows, 90 unique output SKUs, five blank rows removed, five duplicate rows removed,
 zero failures, and identical input SHA-256 before and after execution.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```powershell
 git add README.md examples/ecommerce-catalog-audit docs/superpowers/specs/2026-07-31-realistic-ecommerce-audit-case-design.md docs/superpowers/plans/2026-07-31-realistic-ecommerce-audit-case.md

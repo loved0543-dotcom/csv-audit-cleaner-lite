@@ -31,6 +31,11 @@ rows after 1 blank row and 1 duplicate are removed, with 0 failed files. They
 show the workflow and evidence format; they do not promise the same counts for
 every CSV.
 
+For a larger inspection-ready fixture, see the
+[100-row ecommerce catalog audit](examples/ecommerce-catalog-audit/README.md):
+100 input rows become 90 output rows after 5 blank rows and 5 duplicate SKU rows
+are removed, with 0 failed files.
+
 ## What it does
 
 - Trims leading and trailing whitespace.
