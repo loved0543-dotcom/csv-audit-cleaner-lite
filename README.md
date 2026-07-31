@@ -20,6 +20,12 @@ the app does not upload CSV data to a cloud service.
 ·
 [Share a verified result or report a problem](https://github.com/loved0543-dotcom/csv-audit-cleaner-lite/issues/new?template=lite-feedback.yml)
 
+Need batch processing and the full audit workflow? [Get CSV Audit Cleaner for $15](https://lovelife717.gumroad.com/l/csv-audit-cleaner).
+
+Need data collected from one source you are authorized to use? [Review the fixed $149 Data Reliability Pilot](https://oneeyeview-automation.vercel.app/data-reliability-pilot):
+up to 500 records with 24-hour delivery and explicit evidence and exclusion
+boundaries.
+
 The video and report use one fixed local sample: 4 input rows become 2 output
 rows after 1 blank row and 1 duplicate are removed, with 0 failed files. They
 show the workflow and evidence format; they do not promise the same counts for
